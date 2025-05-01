@@ -18,7 +18,7 @@ leftArrow.addEventListener("click", () => {
 
   sectionOne.style.backgroundImage = `url('${desktopImages[currentIndex]}')`;
   sectionOne.style.backgroundSize = "cover";
-      sectionOne.style.backgroundPosition = "center";
+  sectionOne.style.backgroundPosition = "center";
 
   if (currentIndex == 2) {
     sectionOne.style.backgroundPosition = "center";
@@ -35,4 +35,23 @@ rightArrow.addEventListener("click", () => {
   if (currentIndex == 2) {
     sectionOne.style.backgroundPosition = "center";
   }
+});
+
+let hamburgerMenu = document.querySelector(".hamburger-container");
+let mobileMenuOver = document.querySelector(".mobile-menu-overlay");
+let hamburgerCloser = document.querySelector(".close-image-x");
+let greyOverlay = document.querySelector(".grey-overlay");
+hamburgerMenu.addEventListener("click", () => {
+  if (mobileMenuOver.style.display == "none") {
+    mobileMenuOver.style.display = "flex";
+    greyOverlay.style.display = "block";
+  } else {
+    mobileMenuOver.style.display = "flex";
+    greyOverlay.style.display = "block";
+  }
+});
+
+hamburgerCloser.addEventListener("click", () => {
+  mobileMenuOver.style.display = "none";
+  greyOverlay.style.display = "none";
 });
